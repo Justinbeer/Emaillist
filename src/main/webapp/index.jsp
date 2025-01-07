@@ -56,7 +56,7 @@ List<EmailVo> list = dao.getList();
                 <tr>
                     <td><%= vo.getLastName() %><%= vo.getFirstName() %></td>
                     <td><%= vo.getEmail() %></td>
-                    <td><a class="btn btn-danger" href="#" onclick="confirm_delete(<%= vo.getNo() %>)">삭제</a></td>
+                    <td><a class="btn btn-danger btn-sm" href="#" onclick="confirm_delete(<%= vo.getNo() %>)">삭제</a></td>
                 </tr>
             <% 
             } 
