@@ -20,6 +20,16 @@ String dbPass = context.getInitParameter("dbPass");
 	rel="stylesheet" 
 	integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" 
 	crossorigin="anonymous">
+<script>
+function confirm_delete(no) {
+	let result = confirm("정말 삭제하겠습니까?");
+	
+	if (result) {
+		document.location.href = "delete.jsp?no=" + no;
+	}
+}
+</script>
+
 </head>
 <body>
     <div class="container">
@@ -46,7 +56,7 @@ List<EmailVo> list = dao.getList();
                 <tr>
                     <td><%= vo.getLastName() %><%= vo.getFirstName() %></td>
                     <td><%= vo.getEmail() %></td>
-                    <td><a class="btn btn-danger" href="delete.jsp?no=<%= vo.getNo() %>">삭제</a></td>
+                    <td><a class="btn btn-danger" href="#" onclick="confirm_delete(<%= vo.getNo() %>)">삭제</a></td>
                 </tr>
             <% 
             } 
