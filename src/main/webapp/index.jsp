@@ -63,7 +63,6 @@ List<EmailVo> list = dao.getList();
             %>
             </tbody>
         </table>
-        <br />
 
         <p>
             <a href="form.jsp" class="btn btn-primary">추가 이메일 등록</a>
