@@ -33,11 +33,8 @@ function confirm_delete(no) {
 </head>
 <body>
     <div class="container">
-        <h1 class="mt-5">메일링 리스트 (Model 1)</h1>
-<%
-EmailListDao dao = new EmailListDaoImpl(dbUser, dbPass);
-List<EmailVo> list = dao.getList();
-%>
+        <h1 class="mt-5">메일링 리스트 (Model 2)</h1>
+
         <!-- 리스트 -->
         <!-- vo 객체의 getter를 이용, 리스트를 표시 -->
         <table class="table table-bordered mt-3">
@@ -49,18 +46,13 @@ List<EmailVo> list = dao.getList();
                 </tr>
             </thead>
             <tbody>
-            <% Iterator<EmailVo> it = list.iterator(); 
-            while (it.hasNext()) {
-            	EmailVo vo = it.next();
-            %>
+
                 <tr>
-                    <td><%= vo.getLastName() %><%= vo.getFirstName() %></td>
-                    <td><%= vo.getEmail() %></td>
-                    <td><a class="btn btn-danger btn-sm" href="#" onclick="confirm_delete(<%= vo.getNo() %>)">삭제</a></td>
+                    <td></td>
+                    <td></td>
+                    <td><a class="btn btn-danger btn-sm" href="#" onclick="confirm_delete()">삭제</a></td>
                 </tr>
-            <% 
-            } 
-            %>
+
             </tbody>
         </table>
 
