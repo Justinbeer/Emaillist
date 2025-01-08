@@ -25,7 +25,8 @@ function confirm_delete(no) {
 	let result = confirm("정말 삭제하겠습니까?");
 	
 	if (result) {
-		document.location.href = "delete.jsp?no=" + no;
+		document.location.href = 
+			"<%= request.getContextPath() %>/el?a=delete&no=" + no;
 	}
 }
 </script>
